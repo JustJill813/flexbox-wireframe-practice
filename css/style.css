@@ -1,0 +1,65 @@
+/* Basic reset for margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Layout container */
+  .container {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    min-height: 100vh;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: purple;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    flex-shrink: 0; /* Ensure header remains visible */
+  }
+  
+  /* Articles styling */
+  .article {
+    background-color: pink;
+    color: black;
+    margin: 0.5em 0;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  /* Aside styling */
+  aside {
+    background-color: blue;
+    color: white;
+    padding: 1em;
+    margin-top: 1em;
+    text-align: center;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: orange;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    flex-shrink: 0; /* Ensure footer remains visible */
+  }
+  
+  /* Responsive design for mobile devices */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0.5em; /* Add padding around the container */
+    }
+  
+    .article {
+      margin: 0.5em 0; /* Adjust spacing between articles */
+    }
+  
+    aside {
+      margin: 0.5em 0; /* Adjust spacing for aside */
+    }
+  }
