@@ -52,39 +52,50 @@ body {
   
 
 
-/* Media query for desktop layout */
-@media (min-width: 1024px) {
-  .container {
-    display: flex;
-    flex-direction: column; /* Stack sections vertically by default */
-    min-height: 100vh; /* Full viewport height */
-  }
-
-  header {
-    flex: 0 0 auto; /* Ensure header remains visible */
-    width: 100%; /* Span full width */
-  }
-
-  /* Main section with aside and articles */
-  .main {
-    display: flex; /* Arrange aside and articles horizontally */
-    flex: 1 1 auto; /* Take up remaining space */
-  }
-
-  aside {
-    flex: 0 1 30%; /* Assign 30% of the width to aside */
-    margin-right: 1em; /* Create spacing between aside and articles */
-  }
-
-  .article-container {
-    flex-grow: 1; /* Allocate remaining width */
-    display: flex; /* Enable Flexbox inside */
-    flex-direction: column; /* Stack articles vertically */
-    gap: 0.5em; /* Add spacing between articles */
-  }
-
-  footer {
-      flex: 0 0 auto; /* Ensure footer remains visible */
+  @media (min-width: 1024px) {
+    .container {
+      display: flex;
+      flex-direction: column; /* Stack header, main, and footer vertically */
+      min-height: 100vh; /* Full viewport height */
+    }
+  
+    header, footer {
+      flex: 0 0 auto; /* Ensure header and footer stay visible */
       width: 100%; /* Span full width */
+      padding: 1em;
+      text-align: center;
+    }
+  
+    .main {
+      display: flex; /* Arrange the main content */
+      flex: 1; /* Fill remaining vertical space */
+    }
+  
+    .column-container {
+      display: flex; /* Enable Flexbox for aside and articles */
+      flex: 1; /* Take up remaining space */
+      gap: 1em; /* Add space between aside and articles */
+    }
+  
+    .aside {
+      flex: 1; /* Allocate space for aside */
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+  
+    .article-container {
+      flex: 2; /* Allocate the remaining width to articles */
+      display: flex; /* Enable Flexbox inside */
+      flex-direction: column; /* Stack articles vertically */
+      gap: 1em; /* Add spacing between articles */
+      padding: 1em;
+    }
+  
+    .article {
+      flex: 1; /* Allow articles to grow and fill space */
+      padding: 1em;
+      text-align: center;
+    }
   }
-}
+  
