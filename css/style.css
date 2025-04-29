@@ -91,6 +91,10 @@ body {
       gap: 1em; /* Add spacing between articles */
       padding: 1em;
     }
+
+    aside {
+      width: 30%;
+  }
   
     .article {
       flex: 1; /* Allow articles to grow and fill space */
